@@ -12,12 +12,12 @@ function walls(diameter, height){
 }// end of function
 
 function materialsNeeded(){
-    var d = 8;
-    var h = 10;
+    var d = document.getElementById("across").value;
+    var h = document.getElementById("height").value;
 
-    var carpetNeeded = floor(d);
-    var pointNeeded = walls(d, h);
+    var carpetNeeded = Math.ceil(floor(d));
+    var paintNeeded = Math.ceil(walls(d, h));
 
-    console.log(carpetNeeded);
-    console.log(pointNeeded);
+    console.log('Carpet Needed is '+carpetNeeded+' sqft');
+    console.log('Paint Needed is '+paintNeeded+' sqft');
 } // end of function
